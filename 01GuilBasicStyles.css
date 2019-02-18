@@ -1,4 +1,4 @@
-/* ik non trivial things */
+/* ik not neccessary to look. only the cute comment maybe */
 /* =====================================
    Page Styles
 ======================================== */
@@ -13,7 +13,7 @@ body {
   padding: 0;
   margin: 0;
 }
-.container > * {      /* ik this is cute */
+.container > * {                                /* IK this is cute */
   color: #fff;
   text-shadow: 0 2px 0 rgba(110,133,156,0.12);
   padding: 0.85em;

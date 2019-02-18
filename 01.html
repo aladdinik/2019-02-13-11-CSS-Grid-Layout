@@ -11,11 +11,11 @@
   +\ source video is 'Adjust the Grid with Media Queries' , https://teamtreehouse.com/library/adjust-the-grid-with-media-queries
   +\ i have strip the page from all my personal layout from the usual */
 
-/* mobile first approach , so no media queries needed here . this is considered as your default set up*/
+/* mobile first approach , so no media queries needed here . this is considered as a default set up*/
   div.container {
-    height: 100vh;                       /*100% of screen height all times*/
+    height: 100vh;                       /*takes 100% of screen height all times*/
     display: grid;
-    grid-template-columns: 1fr;          /*1 flexible column which always remain on screen*/
+    grid-template-columns: 1fr;          /*1 flexible column which always remain on all screen width*/
     grid-auto-rows: minmax(150px, auto); /*minimum row will be 150px while  auto always keep the full height of the content whilst leaving no freespace on the page */
     grid-gap: 10px;
     grid-template-areas:
@@ -51,7 +51,7 @@
   @media (min-width: 768px) {
     div.container {
       grid-template-columns: 1fr 2fr 1fr;                  /*3 columns now*/
-      grid-template-rows: 100px minmax(150px, auto) 100px;  /*3 explicit row, and the above grid-auto-rows: is implicit rows*/
+      grid-template-rows: 100px minmax(150px, auto) 100px;  /*3 explicit row, and the mobile grid-auto-rows: is implicit rows*/
       grid-template-areas:
         "header header header"
         "nav main aside"

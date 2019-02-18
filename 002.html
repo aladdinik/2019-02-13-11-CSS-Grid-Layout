@@ -18,8 +18,8 @@
         border:blue 10px solid;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-template-rows: repeat(auto-fit, minmax(50px, 1fr)); /* not understanding why it will not apply to all rows */
-        grid-auto-rows: 25px 1fr;
+        grid-template-rows: repeat(auto-fit, minmax(50px, 1fr)); /* with auto-fit it almost becomes implicit grid and grid-auto-row can now declare all rows size */
+        grid-auto-rows: 70px 1fr;     /* this determines the size of all the rows now*/ 
         grid-column-gap: 10px;
         grid-row-gap: 10px;
     }
