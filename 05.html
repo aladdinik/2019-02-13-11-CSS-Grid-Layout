@@ -4,29 +4,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="zIK/2-css/aReset.css" rel="stylesheet" type="text/css">
-<!--    <link href="zIK/2-css/normalize.css" rel="stylesheet" type="text/css">-->
+    <link href="zIK/2-css/normalize.css" rel="stylesheet" type="text/css">
     <link href="zIK/2-css/rik.css" rel="stylesheet" type="text/css">
-    <title>01 </title>
+    <title>05 grid-template-areas:</title>
 <style>
 /* + + + + + + + + + + + + + STYLE -------------------------------*/
-    .ik > div {
-        border: red 1px solid;
-    }
-
-    .ik {
-        /* max-width: 1000px; */
+    div.gridContainer {
         border:blue 10px solid;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-template-rows: repeat(auto-fit, minmax(50px, 1fr)); /* with auto-fit it almost becomes implicit grid and grid-auto-row can now declare all rows size */
-        grid-auto-rows: 70px 1fr;     /* this determines the size of all the rows now*/ 
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
     }
-
-    .ik div:nth-of-type(9) {
-      grid-row-start: 4 6;
+    
+    div.gridContainer > div.gridItem {
+        border: red 1px solid;
     }
+    
+/*
+    .gc1 {
+        
+    }
+*/
+    
+    .gc1 :first-child {
+/*        grid-area: "one";*/
+        background-color: green;
+    }
+    
+    .gc1 :nth-child(2) {
+/*        grid-area: two;*/
+        background-color: green;
+    }
+    
+    .gc1 div:nth-of-type(3) {
+/*        grid-area: three;*/
+        background-color: green;
+    }
+    
+    .gc1 div:last-of-type {
+/*        grid-area: four;*/
+        background-color: green;
+    }
+                /************* sort this out */
 
 /*-------------------------- /style //////////////////////////////*/
 </style>
@@ -40,17 +57,24 @@
      instructions how to enable JavaScript in your web browser</a>.
     </noscript>
 <!--+ + + + + + + + + + + + + MAIN ------------------------------->
-    <div class="ik">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-    </div>
+    <div class="gridContainer gc1">
+        <div class="gridItem">1</div>
+        <div class="gridItem">2</div>
+        <div class="gridItem">3</div>
+        <div class="gridItem">4</div>
+<!--
+        <div class="gridItem">5</div>
+        <div class="gridItem">6</div>
+        <div class="gridItem">7</div>
+        <div class="gridItem">8</div>
+        <div class="gridItem">9</div>
+        <div class="gridItem">10</div>
+        <div class="gridItem">11</div>
+-->
+    </div>    <hr>
+    
+    <hr>
+    
 
 <!-------------------------- /main /////////////////////////////-->
 <script
