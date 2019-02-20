@@ -6,7 +6,7 @@
     <link href="zIK/2-css/aReset.css" rel="stylesheet" type="text/css">
     <link href="zIK/2-css/normalize.css" rel="stylesheet" type="text/css">
     <link href="zIK/2-css/rik.css" rel="stylesheet" type="text/css">
-    <title>05 grid-template-areas:</title>
+    <title>05 grid-template-areas: / grid-area: / </title>
 <style>
 /* + + + + + + + + + + + + + STYLE -------------------------------*/
     div.gridContainer {
@@ -18,33 +18,33 @@
         border: red 1px solid;
     }
     
-/*
     .gc1 {
-        
+        grid-template-areas:
+            "one two"
+            ". four"
+            "three four"
+            "three four";    /*set the structure of the grid. .dot is to leave grid track empty*/
+        grid-template-rows: repeat(5, 1fr);  /*i set 4 rows with grid-template-areas: but there is 5 rows so the bottom one is now freespace*/
+        /*without grid-template-columns: the columns will become auto , however it is always to declare it still*/
     }
-*/
     
+    /*before you can use grid-template-areas: you have to name each grid item with grid-area:*/
     .gc1 :first-child {
-/*        grid-area: "one";*/
-        background-color: green;
+        grid-area: "one";
     }
     
     .gc1 :nth-child(2) {
-/*        grid-area: two;*/
-        background-color: green;
+        grid-area: two;
     }
     
     .gc1 div:nth-of-type(3) {
-/*        grid-area: three;*/
-        background-color: green;
+        grid-area: three;
     }
     
     .gc1 div:last-of-type {
-/*        grid-area: four;*/
-        background-color: green;
+        grid-area: four;
     }
-                /************* sort this out */
-
+    
 /*-------------------------- /style //////////////////////////////*/
 </style>
 </head>
@@ -62,20 +62,7 @@
         <div class="gridItem">2</div>
         <div class="gridItem">3</div>
         <div class="gridItem">4</div>
-<!--
-        <div class="gridItem">5</div>
-        <div class="gridItem">6</div>
-        <div class="gridItem">7</div>
-        <div class="gridItem">8</div>
-        <div class="gridItem">9</div>
-        <div class="gridItem">10</div>
-        <div class="gridItem">11</div>
--->
-    </div>    <hr>
-    
-    <hr>
-    
-
+    </div>    
 <!-------------------------- /main /////////////////////////////-->
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
