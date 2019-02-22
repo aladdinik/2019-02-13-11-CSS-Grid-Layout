@@ -6,43 +6,22 @@
     <link href="zIK/2-css/aReset.css" rel="stylesheet" type="text/css">
 <!--    <link href="zIK/2-css/normalize.css" rel="stylesheet" type="text/css">-->
     <link href="zIK/2-css/rik.css" rel="stylesheet" type="text/css">
-    <title>05 grid-template-areas: / grid-area: / </title>
+    <title>09 align-items: / justify-items: / place-items:</title>
 <style>
 /* + + + + + + + + + + + + + STYLE -------------------------------*/
     div.gridContainer {
         border:blue 10px solid;
-        display: grid;
+        display: grid;      
+        grid-template-rows: repeat(4, minmax(40px, auto));
+        grid-template-columns: repeat(4, minmax(40px, auto));
     }
     
     div.gridContainer > div.gridItem {
         border: red 1px solid;
     }
-    
-    .gc1 {
-        grid-template-areas:
-            "one two"
-            ". four"
-            "three four"
-            "three four";    /*set the structure of the grid. .dot is to leave grid track empty*/
-        grid-template-rows: repeat(5, 1fr);  /*i set 4 rows with grid-template-areas: but there is 5 rows so the bottom one is now freespace*/
-        /*without grid-template-columns: the columns will become auto , however it is always to declare it still*/
-    }
-    
-    /*before you can use grid-template-areas: you have to name each grid item with grid-area:*/
-    .gc1 :first-child {
-        grid-area: "one";
-    }
-    
-    .gc1 :nth-child(2) {
-        grid-area: two;
-    }
-    
-    .gc1 div:nth-of-type(3) {
-        grid-area: three;
-    }
-    
-    .gc1 div:last-of-type {
-        grid-area: four;
+
+    .gridContainer {
+        align-content: space-between;
     }
 /*-------------------------- /style //////////////////////////////*/
 </style>
@@ -51,10 +30,17 @@
 <main>
 <!--+ + + + + + + + + + + + + MAIN ------------------------------->
     <div class="gridContainer gc1">
-        <div class="gridItem">1</div>
-        <div class="gridItem">2</div>
-        <div class="gridItem">3</div>
-        <div class="gridItem">4</div>
+        <div class="gridItem gi1">1</div>
+        <div class="gridItem gi2">2</div>
+        <div class="gridItem gi3">3</div>
+        <div class="gridItem gi4">4</div>
+        <div class="gridItem gi5">5</div>
+        <div class="gridItem gi6">6</div>
+        <div class="gridItem gi7">7</div>
+        <div class="gridItem gi8">8</div>
+        <div class="gridItem gi9">9</div>
+        <div class="gridItem gi10">10</div>
+        <div class="gridItem gi11">11</div>
     </div>    
 <!-------------------------- /main /////////////////////////////-->
 <script
