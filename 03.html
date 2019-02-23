@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!-- enter brief description of the page-->
+<head><!-- grid-auto-flow:-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="zIK/2-css/aReset.css" rel="stylesheet" type="text/css">
@@ -36,6 +36,7 @@
         grid-auto-flow: column;
         grid-template-rows: repeat(3, auto);
     }
+    /*also grid-auto-columns can only work with grid-auto-flow: column;*/
 /*-------------------------- /style //////////////////////////////*/
 </style>
 </head>
@@ -47,10 +48,7 @@
         <div class="gridItem">2</div>
         <div class="gridItem">3</div>
         <div class="gridItem">4</div>
-
-    </div>    
-    
-    <hr>
+    </div>        <hr>
     
     <div class="gridContainer gc2">
         <div class="gridItem">1 grid-auto-flow: column;</div>
@@ -58,10 +56,7 @@
         <div class="gridItem">3</div>
         <div class="gridItem">4</div>
         <div class="gridItem">5</div>
-
-    </div>
-
-    <hr>
+    </div>    <hr>
     
     <div class="gridContainer gc3">
         <div class="gridItem">1 grid-auto-flow: row;</div>
@@ -70,9 +65,7 @@
         <div class="gridItem">4</div>
         <div class="gridItem">5</div>
         <div class="gridItem">6</div>
-    </div>
-    
-    <hr>
+    </div>  <hr>
 
     <div class="gridContainer gc4">
         <div class="gridItem">1 grid-auto-flow: column;</div>
@@ -86,7 +79,8 @@
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous">
+</script>
 <script src="zIK/3-JS/kik.js" type="text/javascript"></script>
 <script type="text/javascript">
 /* + + + + + + + + + + + + + SCRIPT ------------------------------*/

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!-- enter brief description of the page-->
+<head><!-- grid-template-rows: / grid-template-columns: / grid-auto-rows: / grid-auto-column / grid-row-gap / grid-column-gap:-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--    <link href="zIK/2-css/aReset.css" rel="stylesheet" type="text/css">-->
-    <link href="zIK/2-css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="zIK/2-css/aReset.css" rel="stylesheet" type="text/css">
+<!--    <link href="zIK/2-css/normalize.css" rel="stylesheet" type="text/css">-->
     <link href="zIK/2-css/rik.css" rel="stylesheet" type="text/css">
     <title>04 grid-template-rows: / grid-template-columns: / grid-auto-rows: / grid-auto-column / grid-row-gap / grid-column-gap:</title>
 <style>
@@ -16,6 +16,7 @@
     
     div.gridContainer > div.gridItem {
         border: red 1px solid;
+        background-color: bisque;
     }
     
     .gc1 {
@@ -28,9 +29,9 @@
     .gc2 {
         grid-auto-flow: column;
         grid-template-rows: 1fr 1fr;
-        grid-template-columns: min-content;
+        grid-template-columns: min-content;  /*BIM i only set the first column*/
         grid-auto-columns: 200px 50px;    /*will only work with grid-auto-flow: column; */
-        grid-column-gap: 20px;
+        grid-column-gap: 15px;
     }
 /*-------------------------- /style //////////////////////////////*/
 </style>
@@ -69,7 +70,8 @@
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous">
+</script>
 <script src="zIK/3-JS/kik.js" type="text/javascript"></script>
 <script type="text/javascript">
 /* + + + + + + + + + + + + + SCRIPT ------------------------------*/
