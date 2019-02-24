@@ -1,8 +1,6 @@
+/* iK nothing special here, just wanted to use my flex template to show the differences with grid template */
+
 /*        by ilshaad kheerdali 2018 */
-/* UPDATED 2019 02 24 : this flexbox css template is not as flexible as css grid, therefore this is only ideal if you are targetting mobile/tablet (with 1 column) user or browsers that is not css grid supported. 
-     +\ it is difficult getting a good responsive sticky footer layout when you are using media query 768px and upper to get more than one column. So either you use just header/main/footer and do everything inside it or sacrifice sticky footer as that is link to flex.
-		+\ plus it is a nightmare to set gaps between the containers if you wanted
-*/
 /* THE SET UP COLUMN FOR STICKY FOOTER AND BACKGROUND IMAGE */
 *,
 *::before,
@@ -13,63 +11,69 @@
 
 /***********************************/
 
-/* STICKY FOOTER */
-:root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;    /* IMPORTANT IK display/f.direction/m.height   is for sticky footer but be sure to add margin-top: auto; on the main footer
-	+\ also this must be used with header/main/footer otherwise flex.D: column changes the format*/
-    margin: 0px;
-    padding: 0px;
-    line-height: 1.4;
-}
+/* css grid */
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;    /* IMPORTANT IK display/f.direction/m.height   is for sticky footer but be sure to add margin-top: auto; on the main footer
-	+\ also this must be used with header/main/footer otherwise flex.D: column changes the format*/
-    margin: 0px;
-    padding: 0px;
-    line-height: 1.4;
-}
-
+/* add as many grid items you like as long as it is inside div#body_wrapper tag and you named it with grid-area , then you can place it along with the others */
 div#body_wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;    /* IMPORTANT IK display/f.direction/m.height   is for sticky footer but be sure to add margin-top: auto; on the main footer  */
-    margin: 0px;
-    padding: 0px;
-    line-height: 1.4;
-/*    its a copy only because you want it to be in sync with the body plus you now have extra container to customize (.bodywrapper) without having to touch the body*/
-    width: 100%;
-    margin: auto;
-	font-family: ;
+	position: relative;       /*for image background*/
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr;       /* 1 column since its mobile/tablet*/
+	grid-auto-rows: minmax(180px, auto);   /*depending how many containers you have than set the minimum you prefer*/
+	grid-row-gap: 0.5%;   /*ik set whatever you prefer*/
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";          /* ensure you enter all the grid items*/
+} 
 
+header#main_header {
+	grid-area: header;
+}
+
+main#main_page {
+	grid-area: main;
 }
 
 footer#main_footer {
-    margin-top: auto; /*always keep so it stay as a sticky footer*/
+	grid-area: footer;
 }
-/*ik after choosing either :root / body / div#body_wrapper , delete the other 2, but first check with img#backgroundImg if everything is all good 
 
-+\ ik personal thoughts. after experimenting i notice that it is perfect for mobile first with the columns, and you can add extra containers but in media query 768px and upper you cannot move the containers otherwise sticky footer will not apply. so do not move header / main / footer , and just do everything inside those containers , including navbar.
-     +\ plus it is not so easy to create gaps between header / main / footer , so that you can see more of the background image if any
-     +\ css grid is much more flexible than flexbox */
+/* 768px plus 700px landscape */
+@media only screen and (min-width: 768px),
+       only screen and (min-width: 700px) and (orientation: landscape) /*might want to consider 768px but test it out first*/ {
+		   div#body_wrapper {
+			   grid-template-rows: 1fr 4fr 1fr;
+		   }   
+}
 
-/********************************/
+
+/* 992px */
+@media only screen and (min-width: 992px) {
+
+}
+
+
+/* 1200px */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* ik feel free to adjust to your project as grid is so flexible and if you need to check guil version for ideas */
+
+/*******************************************************************/
 
 /* BACKGROUND IMAGE
 inserting main background images which will always center and cover to whole page.  2 ways you can choose ik (https://css-tricks.com/perfect-full-page-background-image/  = for more info on 'Perfect Full Page Background Image' )
-.1st way = #Awesome, Easy, Progressive CSS3 Way -*/   /*
+.1st way = #Awesome, Easy, Progressive CSS3 Way -*/   
 div#background_image {
-  background: url(iKinsertImageHere) no-repeat center center fixed;
+  background: url(images/ali.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-*/
+
 /*+\ main reason to use this is if you want to use the other background properties and style it further .
 +\ be sure that the div box is place before body and div#body_wrapper as this will be an exclusive div box.
 +\ also do not forget to add an extra background-color for fall back
@@ -102,7 +106,6 @@ img#backgroundImg {
 */
 
 /* STICKY FOOTER AND BACKGROUND IMAGE OVER AND NOW DESIGN YOUR WEB SITE */
-
 
 
 /*
