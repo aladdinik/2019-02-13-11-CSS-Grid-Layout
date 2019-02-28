@@ -125,7 +125,7 @@ main#main_page {
 footer#main_footer {
 }
 
-/* ik still undecided if i should just use @media alone instead of the other things, need more research , but for now delete 'only screen and' */
+/* ik i am still undecided if i should just use @media alone instead of the other things, need more research , but for now delete 'only screen and' */
 /* specific mobile css */
 @media only screen and (max-width: 767px) /*480px main focus*/ {
 

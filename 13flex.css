@@ -1,3 +1,5 @@
+/* iK nothing special here, just wanted to use my flex template to show the differences with grid template */
+
 /*        by ilshaad kheerdali 2018 */
 /* UPDATED 2019 02 24 : this flexbox css template is not as flexible as css grid, therefore this is only ideal if you are targetting mobile/tablet (with 1 column) user or browsers that is not css grid supported. 
      +\ it is difficult getting a good responsive sticky footer layout when you are using media query 768px and upper to get more than one column. So either you use just header/main/footer and do everything inside it or sacrifice sticky footer as that is link to flex.
@@ -61,15 +63,15 @@ footer#main_footer {
 
 /* BACKGROUND IMAGE
 inserting main background images which will always center and cover to whole page.  2 ways you can choose ik (https://css-tricks.com/perfect-full-page-background-image/  = for more info on 'Perfect Full Page Background Image' )
-.1st way = #Awesome, Easy, Progressive CSS3 Way -*/   /*
+.1st way = #Awesome, Easy, Progressive CSS3 Way -*/   
 div#background_image {
-  background: url(iKinsertImageHere) no-repeat center center fixed;
+  background: url(images/ali.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-*/
+
 /*+\ main reason to use this is if you want to use the other background properties and style it further .
 +\ be sure that the div box is place before body and div#body_wrapper as this will be an exclusive div box.
 +\ also do not forget to add an extra background-color for fall back
@@ -102,7 +104,6 @@ img#backgroundImg {
 */
 
 /* STICKY FOOTER AND BACKGROUND IMAGE OVER AND NOW DESIGN YOUR WEB SITE */
-
 
 
 /*

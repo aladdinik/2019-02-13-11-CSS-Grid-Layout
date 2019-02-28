@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!-- enter brief description of the page-->
+<head><!-- grid-template-areas: / grid-area: -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="zIK/2-css/aReset.css" rel="stylesheet" type="text/css">
-    <link href="zIK/2-css/normalize.css" rel="stylesheet" type="text/css">
+<!--    <link href="zIK/2-css/normalize.css" rel="stylesheet" type="text/css">-->
     <link href="zIK/2-css/rik.css" rel="stylesheet" type="text/css">
-    <title>05 grid-template-areas: / grid-area: / </title>
+    <title>05 grid-template-areas: / grid-area: </title>
 <style>
 /* + + + + + + + + + + + + + STYLE -------------------------------*/
     div.gridContainer {
@@ -16,9 +16,10 @@
     
     div.gridContainer > div.gridItem {
         border: red 1px solid;
+        background-color: bisque;
     }
     
-    .gc1 {
+    .gridContainer {
         grid-template-areas:
             "one two"
             ". four"
@@ -29,33 +30,26 @@
     }
     
     /*before you can use grid-template-areas: you have to name each grid item with grid-area:*/
-    .gc1 :first-child {
+    .gridContainer :first-child {
         grid-area: "one";
     }
     
-    .gc1 :nth-child(2) {
+    .gridContainer :nth-child(2) {
         grid-area: two;
     }
     
-    .gc1 div:nth-of-type(3) {
+    .gridContainer div:nth-of-type(3) {
         grid-area: three;
     }
     
-    .gc1 div:last-of-type {
+    .gridContainer div:last-of-type {
         grid-area: four;
     }
-    
 /*-------------------------- /style //////////////////////////////*/
 </style>
 </head>
 <body>
 <main>
-<!-- <noscript> is for users who have javascript turned off. instructions on how to enable javascript. ik you can modify the inline style how you want and beware of top nav bar-->
-    <noscript style="border: red 2px solid; font-weight: bolder; padding-bottom: 4px;">
-     For full functionality of this site it is necessary to enable JavaScript.
-     Here are the <a href="https://www.enable-javascript.com/" target="_blank">
-     instructions how to enable JavaScript in your web browser</a>.
-    </noscript>
 <!--+ + + + + + + + + + + + + MAIN ------------------------------->
     <div class="gridContainer gc1">
         <div class="gridItem">1</div>
@@ -67,18 +61,12 @@
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous">
+</script>
 <script src="zIK/3-JS/kik.js" type="text/javascript"></script>
 <script type="text/javascript">
 /* + + + + + + + + + + + + + SCRIPT ------------------------------*/
-
-
-
 /*------------------------- /script /////////////////////////////*/
-// printD();
-// everyStyles(DOMelement);
-// ascii(a, b);
-// console.log();
 </script>
 </main>
 </body>
